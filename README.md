@@ -1,4 +1,4 @@
-OVERVIEW
+# OVERVIEW
 
 This readme accompanies the IceBridge ATM L1B Qfit Elevation and
 Return Strength MATLAB data reader: readILATM1B.m
@@ -22,13 +22,34 @@ available at
 
 http://nsidc.org/data/icebridge/tools.html
 
-DISCLAIMER
+## Getting Started
 
-This software is provided as-is as a service to the user community in
-the hope that it will be useful, but without any warranty of fitness
-for any particular purpose or correctness.  Bug reports, comments, and
-suggestions for improvement are welcome; please send to
-nsidc@nsidc.org.
+### Prerequisites
+
+TODO:
+qi2txt
+
+### Installing
+
+DOWNLOADING THE SOFTWARE
+
+To unpack the tar file on a Linux system:
+(the "$" is the Linux command-line prompt):
+
+  $ tar xvf matlab_ILATM1B_reader_VERSION.tar
+
+Where VERSION is the version of the tar file, e.g. 0.3.
+The result of this command should be the five files listed above
+written to the current directory.
+
+Add the reader path: either edit the Matlab start-up script, or use
+the function addpath at the Matlab command line.
+
+Type help readILATM1B at the matlab command prompt.
+
+Type help test_readILATM1B at the matlab command prompt.
+
+### Reading ILATM1B data
 
 USING THE SOFTWARE
  
@@ -74,39 +95,26 @@ function [data, header] = readILATM1B(filename_url, qi2txt_dir)
   National Snow and Ice Data Center, Susan Rogers, March 16, 2011
   Copyright (c) 2011 Regents of the University of Colorado.
 
-
-DOWNLOADING THE SOFTWARE
-
-There are five files in the downloaded tar file:
-
-RELEASE_NOTES.txt
-  Contains a running list of changes incorporated into each release of the ILATM1B matlab reader.
-
-matlab-ILATM1B-reader-readme.txt
-  This file.
-
-readILATM1B.m
-  The Matlab program for the reader.
+TODO:
 
 test_readILATM1B.m
   Matlab test program that serves as an example of how to call
   readILATM1B.m.
 
-expected_output.txt
-  ASCII text file used by test_readLATM1B.m.
+## Contributing
 
-To unpack the tar file on a Linux system:
-(the "$" is the Linux command-line prompt):
+## Versioning
 
-  $ tar xvf matlab_ILATM1B_reader_VERSION.tar
+## Authors
 
-Where VERSION is the version of the tar file, e.g. 0.3.
-The result of this command should be the five files listed above
-written to the current directory.
+## License
 
-Add the reader path: either edit the Matlab start-up script, or use
-the function addpath at the Matlab command line.
+DISCLAIMER
 
-Type help readILATM1B at the matlab command prompt.
+This software is provided as-is as a service to the user community in
+the hope that it will be useful, but without any warranty of fitness
+for any particular purpose or correctness.  Bug reports, comments, and
+suggestions for improvement are welcome; please send to
+nsidc@nsidc.org.
 
-Type help test_readILATM1B at the matlab command prompt.
+## Acknowledgements
