@@ -18,17 +18,17 @@ at the National Snow and Ice Data Center (NSIDC).
 ### Prerequisites
 
 * [MATLAB v9.0 or greater](https://www.mathworks.com/products/matlab.html)
-* [The IceBridge ATM qfit reader](ftp://sidads.colorado.edu/pub/tools/icebridge/qfit/c/qi2txt_v0.5.zip)
+* [The IceBridge ATM qfit reader](https://nsidc.org/data/icebridge/tools.html)
 
 ### Installing
 
 #### Option 1: From a release
 
-#. Select a [release of the
+1. Select a [release of the
 ILATM1B-reader](https://github.com/kbeamnsidc/ILATM1B-reader/releases)
 and download the desired release.
 
-#. Unpack the tar file. At a command prompt:
+1. Unpack the tar file. At a command prompt:
 
         $ tar xvf matlab_ILATM1B_reader_VERSION.tar
 
