@@ -1,5 +1,4 @@
-<img src="nsidc.jpg" alt="NSIDC logo" style="width=225px">
-<img src="icebridge_logo.png" alt="IceBridge logo" style="width=225px">
+![NSIDC](nsidc.jpg)
 
 # OVERVIEW
 
