@@ -128,7 +128,7 @@ Susan Rogers, National Snow and Ice Data Center
 
 This software is licensed under the MIT License.
 
-Copyright (c) 2018 National Snow and Ice Data Cente (NSIDC)
+Copyright (c) 2018 National Snow and Ice Data Center (NSIDC)
 
 DISCLAIMER
 
