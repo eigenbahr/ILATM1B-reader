@@ -1,20 +1,17 @@
+![NSIDC](nsidc.jpg)
+
 # OVERVIEW
 
 The ILATM1B-reader MATLAB package provides a function to read binary
-IceBridge ATM data files. The function returns a floating point array
-and text header values from a given ATM granule file.
+IceBridge ATM data files.
 
-This Matlab function calls the C program qi2txt which reads
-binary data files from the Operation IceBridge ATM
-instrument. readILATM1B.m returns a data array containing the
-floating-point ATM data as well as an ASCII header line identifying
-each of the 12 fields comprising each ATM data record. Operation
-IceBridge ATM data are available as the ILATM1B product at the
-National Snow and Ice Data Center (NSIDC), at
-
-http://nsidc.org/data/ilatm1b.html
-
-Both the readILATM1B.m software and its required 
+This MATLAB function calls the program qi2txt which reads binary data
+files from the Operation IceBridge ATM instrument. The readILATM1B
+function then returns a data array containing the floating-point ATM
+data as well as an ASCII header line identifying each of the 12 fields
+comprising each ATM data record. Operation IceBridge ATM data are
+available as the [ILATM1B product](http://nsidc.org/data/ilatm1b.html)
+at the National Snow and Ice Data Center (NSIDC).
 
 ## Getting Started
 
@@ -57,55 +54,11 @@ Both commands should show help documentation about the functions.
 
 ### Reading ILATM1B data
 
-USING THE SOFTWARE
- 
-function [data, header] = readILATM1B(filename_url, qi2txt_dir)
- 
-  Reads the Qfit ILATM1B data into matlab; wrapper on the C version.
-  ILATM1B Airborne Topographic Mapper (ATM) Project
-  NASA, Goddard Space Flight Center, Wallops Flight Facility
-  Principal Investigator: Bill Krabill (William.B.Krabill@nasa.gov)
- --------------------------------------------------------------------------
-  USAGE:
-  [data, header] = readILATM1B(filename_url, qi2txt_dir);
- 
-  RETURN VALUES: 
-  data - ILATM1B data.
-  NOTE: the C version qfit reader qi2txt called by this function returns data: 
-   1    Relative Time (seconds from start of the file)
-   2    Laser Spot Latitude (decimal degrees)
-   3    Laser Spot Longitude (decimal degrees)
-   4    Elevation (meters)
-   5    Start Pulse signal Strength (relative integer) 
-   6    Reflected Laser Signal Strength (relative integer)
-   7    Scan Azimuth (degrees)
-   8    Pitch (degrees)
-   9    Roll (degrees)
-  10    GPS PDOP (dilution of precision) 
-  11    Laser received pulse width (digitizer samples)
-  12    GPS Time (seconds)
- 
-  header - ILATM1B ASCII header line produced by qi2txt.
- 
-  ARGUMENTS:
-  filename_url - ILATM1B Qfit input data file URL.
-  qi2txt_dir - directory containing qi2txt C program executable.
- 
-  PATHS:
-  code:
-  http://nsidc.org/data/icebridge/tools.html
- 
-  code was tested on IceBridge FTP data file:
-  ftp://n5eil01u.ecs.nsidc.org/SAN2/ICEBRIDGE/ILATM1B.001/2010.04.05/ILATM1B_20100405_141754.atm4cT3.qi
- --------------------------------------------------------------------------
-  National Snow and Ice Data Center, Susan Rogers, March 16, 2011
-  Copyright (c) 2011 Regents of the University of Colorado.
+At the MATLAB command prompt:
 
-TODO:
-
-test_readILATM1B.m
-  Matlab test program that serves as an example of how to call
-  readILATM1B.m.
+    >> filename_url = 'ftp://n5eil01u.ecs.nsidc.org/SAN2/ICEBRIDGE/ILATM1B.001/2010.04.05/ILATM1B_20100405_141754.atm4cT3.qi';
+    >> qi2txt_dir = '.';
+    >> [data, header] = readILATM1B(filename_url, qi2txt_dir);
 
 ## Contributing
 
@@ -140,9 +93,9 @@ nsidc@nsidc.org.
 
 ## Acknowledgements
 
-ILATM1B Airborne Topographic Mapper (ATM) Project
-NASA, Goddard Space Flight Center, Wallops Flight Facility
-Principal Investigator: [Bill Krabill](William.B.Krabill@nasa.gov)
+* ILATM1B Airborne Topographic Mapper (ATM) Project
+* NASA, Goddard Space Flight Center, Wallops Flight Facility
+* Principal Investigator: [Bill Krabill](William.B.Krabill@nasa.gov)
 
 This software was developed by the IceBridge Group under NASA-DAAC 
 Contract.
