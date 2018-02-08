@@ -1,4 +1,5 @@
-![NSIDC](nsidc.jpg){:height="209px" width="225px"} ![IceBridge](icebridge_logo.png){:height="225px" width="225px"}
+<img src="nsidc.jpg" alt="NSIDC logo" style="width=225px">
+<img src="icebridge_logo.png" alt="IceBridge logo" style="width=225px">
 
 # OVERVIEW
 
