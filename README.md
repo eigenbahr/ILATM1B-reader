@@ -1,8 +1,8 @@
-![NSIDC](nsidc.jpg)
+![NSIDC](nsidc.jpg) ![IceBridge](icebridge_logo.png)
 
 # OVERVIEW
 
-The ILATM1B-reader MATLAB package provides a function to read binary
+The ILATM1B MATLAB package provides a function to read binary
 IceBridge ATM data files.
 
 This MATLAB function calls the program qi2txt which reads binary data
@@ -41,16 +41,26 @@ Clone this GitHub repository on your local machine:
 #### Configure MATLAB
 
 Add the reader path: either edit the Matlab start-up script, or use
-the function addpath at the Matlab command line.
+the function `addpath` at the Matlab command line. E.g., if the
+package was extracted to `/home/users/janedoe/ILATM1B-reader`, then at
+the MATLAB command line we would run:
+
+    >> addpath /home/users/janedoe/ILATM1B-reader
 
 #### Verify Install
 
 At the MATLAB command prompt:
 
-    >> help readILATM1B
-    >> help test_readILATM1B
+    >> help ilatm1b
 
-Both commands should show help documentation about the functions.
+This will show the contents of the MATLAB package, and these commands
+will show help on the two functions provided in the package:
+
+    >> help ilatm1b.read
+    >> help ilatm1b.test_read
+
+If these commands are unable to find the ilatm1b package, check your
+installation directory and the MATLAB `path` directory.
 
 ### Reading ILATM1B data
 
@@ -58,7 +68,7 @@ At the MATLAB command prompt:
 
     >> filename_url = 'ftp://n5eil01u.ecs.nsidc.org/SAN2/ICEBRIDGE/ILATM1B.001/2010.04.05/ILATM1B_20100405_141754.atm4cT3.qi';
     >> qi2txt_dir = '.';
-    >> [data, header] = readILATM1B(filename_url, qi2txt_dir);
+    >> [data, header] = ilatm1b.read(filename_url, qi2txt_dir);
 
 ## Contributing
 
